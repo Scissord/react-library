@@ -1,4 +1,6 @@
-export { Home } from './home/Home';
-export { Library } from './library/Library'
-export { About } from './about/About';
-export { NotFound } from './not_found/NotFound';
+export { Layout } from './_layout';
+export { Home } from './Home/Home';
+export { Library } from './Library/Library'
+export { About } from './About/About';
+export { NotFound } from './NotFound/NotFound';
+

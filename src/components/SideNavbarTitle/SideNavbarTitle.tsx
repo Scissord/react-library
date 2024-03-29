@@ -1,12 +1,12 @@
 import { FC } from 'react';
-import styles from './Title.module.scss';
+import styles from './SideNavbarTitle.module.scss';
 
 type TitleProps = {
 	label: string;
   onClick: () => void;
 }
 
-export const Title: FC<TitleProps> = (props) => {
+export const SideNavbarTitle: FC<TitleProps> = (props) => {
 	const { label, onClick } = props;
 
 	return (
