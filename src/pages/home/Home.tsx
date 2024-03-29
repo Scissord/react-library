@@ -12,6 +12,7 @@ export const Home: FC = () => {
 	return (
 		<div className={styles.container}>
 			<Sidebar />
+			
 			<Tabs tabs={tabs}/>
 			<Button label="wtf" onClick={(() => alert('da'))}/>
 		</div>
