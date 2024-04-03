@@ -11,7 +11,7 @@ export const SideNavbarTitle: FC<TitleProps> = (props) => {
 
 	return (
 		<div className={styles.container} onClick={() => onClick()}>
-			<img alt='dino' src='/logo/c.svg' className={styles.logo}/>
+			<img alt='bullfinch' src='/logo/c.svg' className={styles.logo}/>
 			<label className={styles.label}>
 				{label}
 			</label>

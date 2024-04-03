@@ -1,28 +1,38 @@
 import { FC } from 'react';
+import { Icon } from '@components';
+import { useNavigate } from '@hooks';
+ 
+//icons
+import { IoHomeOutline } from "react-icons/io5";
+import { IoLibraryOutline } from "react-icons/io5";
+import { FaQuestionCircle } from "react-icons/fa";
+
 import styles from './SideNavbar.module.scss';
 
 // future:
 // 1. animation onClick
 
 const routes = [
-	{ label: 'Главная', link: '/' },
-	{ label: 'Библиотека', link: '/library' },
-	{ label: 'О себе', link: '/about' },
+	{ label: 'Main', link: '/', icon: <IoHomeOutline /> },
+	{ label: 'Library', link: '/library', icon: <IoLibraryOutline /> },
+	{ label: 'FAQ', link: '/about', icon: <FaQuestionCircle /> },
 ]
 
 export const SideNavbar: FC = () => {
-
+	const navigate = useNavigate();
 
 	return (
-		<ul className={styles.container}>
-			{routes.map((route, i) => (
-				<li 
+		<div className={styles.container}>
+			{routes.map((route) => (
+				<div 
 					key={route.label}
-					className={styles.li}
+					className={styles.title}
+					onClick={() => navigate(route.link)}
 				>
-					<a href={route.link} className={styles.text}>{i + 1}. <span className={styles.label}>{route.label}</span></a>
-				</li>
+					<Icon mr={9} icon={route.icon}/>
+					<text className={styles.text}>{route.label}</text>
+				</div>
 			))}
-		</ul>
+		</div>
 	)
 }

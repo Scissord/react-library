@@ -10,8 +10,14 @@ type TabsProps  = {
 	tabs: Tab[];
 }
 
-export const Tabs: FC<TabsProps> = (props) => {
-	const { tabs } = props;
+const tabs = [
+	{ label: 'Главная', content: 'da' },
+	{ label: 'Библиотека', content: 'net' },
+	{ label: 'Третья', content: 'lol' }
+]
+
+export const Tabs: FC<TabsProps> = () => {
+	// const { tabs } = props;
 
 	const [tab, setTab] = useState<number>(0); 
 

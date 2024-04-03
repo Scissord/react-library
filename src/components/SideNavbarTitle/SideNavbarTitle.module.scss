@@ -2,12 +2,15 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
+  background-color: $bg;
 }
 
 .logo {
 	cursor: pointer;
 	width: 30px;
 	height: 30px;
+  background: $bg;
+  margin-right: 10px;
 }
 
 .label {
