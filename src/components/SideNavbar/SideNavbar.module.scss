@@ -1,25 +1,27 @@
 .container {
-	margin-top: 16px;
 	display: flex;
 	flex-direction: column;
-	gap: 16px;	
 	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 	background-color: $bg;
+	gap: 3px;
+	color: $text;
+	user-select: none;
+	background-color: $bg;
+	font-size: 18px;
 }
 
 .title {
+	padding: 10px;
+}
+
+.link {
 	display: flex;
 	align-items: center;
-	font-size: 18px;
 	cursor: pointer;
-	color: $text;
-	user-select: none;
 	position: relative;
-
-	background-color: $bg;
+	padding: 10px;
 	text-decoration: none;
 
-	/* Псевдоэлемент для создания дополнительного слоя */
 	&::after {
 		content: '';
 		position: absolute;
@@ -27,13 +29,14 @@
 		right: 0;
 		bottom: 0;
 		left: 0;
-		opacity: 0; /* Начальное состояние прозрачности */
-		background-color: rgba(255, 255, 255, 0.3); /* Прозрачный фон */
-		transition: opacity 0.3s ease; /* Анимация для плавного перехода */
+		opacity: 0;
+		background-color: rgba(255, 255, 255, 0.3);
+		transition: opacity 0.3s ease;
+		border-radius: 4px;
 	}
 
-	/* Псевдоэлемент видим только при наведении */
 	&:hover::after {
-		opacity: 1; /* Показываем псевдоэлемент */
+		opacity: 1;
+		border-radius: 4px;
 	}
 }

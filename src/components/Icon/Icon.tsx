@@ -13,10 +13,11 @@ type IconProps = {
 	size?: number | string;
 	mr?: number | string;
 	ml?: number | string;
+	onClick?: () => void;
 }
 
 export const Icon: FC<IconProps> = (props) => {
-	const { icon, color, size, mr, ml } = props;
+	const { icon, color, size, mr, ml, onClick } = props;
 
 	return (
 		<div 
@@ -27,6 +28,7 @@ export const Icon: FC<IconProps> = (props) => {
 				marginRight: mr,
 				marginLeft: ml
 			}}
+			onClick={onClick}
 		>
 			{icon}
 		</div>

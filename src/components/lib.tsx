@@ -1,6 +1,6 @@
 // WEBSITE
 export { SideNavbar } from './SideNavbar/SideNavbar'
-export { SideNavbarTitle } from './SideNavbarTitle/SideNavbarTitle';
+export { SideNavbarLogo } from './SideNavbarLogo/SideNavbarLogo';
 
 // LIBRARY
 export { Tabs } from './Tabs/Tabs';

@@ -29,7 +29,8 @@
     "paths": {
       "@components": ["components/lib"],
       "@pages": ["pages/lib"],
-      "@hooks": ["hooks/lib"]
+      "@hooks": ["hooks/lib"],
+      "@constants": ["constants/lib"]
     }
   },
   "include": [

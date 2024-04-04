@@ -1,12 +1,12 @@
 import { FC } from 'react';
-import styles from './SideNavbarTitle.module.scss';
+import styles from './SideNavbarLogo.module.scss';
 
-type TitleProps = {
+type SideNavbarLogo = {
 	label: string;
   onClick: () => void;
 }
 
-export const SideNavbarTitle: FC<TitleProps> = (props) => {
+export const SideNavbarLogo: FC<SideNavbarLogo> = (props) => {
 	const { label, onClick } = props;
 
 	return (
