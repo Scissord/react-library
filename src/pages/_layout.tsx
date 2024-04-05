@@ -6,8 +6,8 @@ type LayoutProps = {
 	display: ReactNode
 }
 
-export const Layout: FC<LayoutProps> = (props) => {
-	const { display } = props;
+export const Layout: FC<LayoutProps> = ({ display }) => {
+	if (!display) return false;
 
 	return (
 		<div className={styles.container}>

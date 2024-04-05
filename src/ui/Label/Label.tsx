@@ -1,16 +1,15 @@
 import { FC } from 'react';
 import styles from './Label.module.scss';
 
-type LabelProps = {}
+type LabelProps = {
+	text: string
+}
 
-const Label: FC<LabelProps> = (props) => {
-	const {  } = props;
+export const Label: FC<LabelProps> = ({ text }) => {
 
 	return (
 		<div className={styles.container}>
-
+			<label>{text}</label>
 		</div>
 	)
 }
-
-export default Label

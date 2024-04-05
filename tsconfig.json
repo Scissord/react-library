@@ -30,7 +30,8 @@
       "@components": ["components/lib"],
       "@pages": ["pages/lib"],
       "@hooks": ["hooks/lib"],
-      "@constants": ["constants/lib"]
+      "@constants": ["constants/lib"],
+      "@ui": ["ui/lib"]
     }
   },
   "include": [

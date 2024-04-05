@@ -1,5 +1,5 @@
 import { FC, ReactNode } from 'react';
-import { Icon } from '@components';
+import { Icon } from '@ui';
 import { useNavigate } from '@hooks';
 import styles from './SideNavbar.module.scss';
 
