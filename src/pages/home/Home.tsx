@@ -1,11 +1,13 @@
 import { FC } from 'react';
-import styles from './Home.module.scss';
 import { Box } from '@ui';
+
+import styles from './Home.module.scss';
 
 export const Home: FC = () => {
 	return (
 		<div className={styles.container}>
-			<Box text="da" bg="red"/>
+			<p className={styles.text}>Hello, I'm Nur, Welcome to my React Library!</p>
+			{/* <Box text="da" bg="red"/> */}
 		</div>
 	)
 }

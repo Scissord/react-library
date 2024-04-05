@@ -12,7 +12,9 @@ export const Layout: FC<LayoutProps> = ({ display }) => {
 	return (
 		<div className={styles.container}>
 			<Sidebar/>
-			{display}
+			<div className={styles.page}>
+				{display}
+			</div>
 		</div>
 	)
 }

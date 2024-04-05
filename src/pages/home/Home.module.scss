@@ -4,3 +4,27 @@
 	justify-items: center;
 	color: white;
 }
+
+.text {
+	//start video
+	width: 100%;
+	font-size: 3em;
+	letter-spacing: 10px;
+	font-family:  monospace;
+	border-right: 5px solid;
+	white-space: nowrap;
+	overflow: hidden;
+	animation: 
+		typing 4s, // steps(15) here something important
+		cursor .4s step-end infinite alternate;
+}
+
+/* cursor blinking */
+@keyframes cursor {
+	50% { border-color: transparent }
+}
+
+/* typing effect */
+@keyframes typing {
+	from { width: 0 }
+}
