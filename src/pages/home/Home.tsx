@@ -6,8 +6,7 @@ import styles from './Home.module.scss';
 export const Home: FC = () => {
 	return (
 		<div className={styles.container}>
-			<p className={styles.text}>Hello, I'm Nur, Welcome to my React Library!</p>
-			{/* <Box text="da" bg="red"/> */}
+			<Box textClassName={styles.text} text="Hello, I'm Nur, Welcome to my React Library!"/>
 		</div>
 	)
 }

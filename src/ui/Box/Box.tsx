@@ -1,22 +1,27 @@
 import { FC } from 'react'
-import styles from './Box.module.scss'
 
 type BoxProps = {
+	className?: string,
 	bg?: string,
   onClick?: () => void;
-	text?: string
+	text?: string,
+	textClassName?: string,
 }
 
 export const Box: FC<BoxProps> = (props) => {
-	const { bg, onClick, text } = props;
+	const { className, bg, onClick, text, textClassName } = props;
 
 	return (
 		<div 
-			style={{ backgroundColor: bg }} 
+			className={className}
 			onClick={onClick}
-			className={styles.container}
+			style={{ 
+				backgroundColor: bg,
+				width: 'fit-content',
+				height: 'fit-content',
+			}} 
 		>
-			{text}
+			<p className={textClassName}>{text}</p>
 		</div>
 	)
 }
