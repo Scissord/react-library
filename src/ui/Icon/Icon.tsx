@@ -26,7 +26,8 @@ export const Icon: FC<IconProps> = (props) => {
 				color: color ?? 'white', 
 				fontSize: size ?? '1em',
 				marginRight: mr,
-				marginLeft: ml
+				marginLeft: ml,
+				userSelect: 'none'
 			}}
 			onClick={onClick}
 		>

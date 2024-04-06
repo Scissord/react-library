@@ -1,8 +1,13 @@
-//pages
+// for layout pages
 // export { routes } from './routes/routes';
 
-//icons 
-export { firstLibraryColumn } from './icons/icons';
-export { secondLibraryColumn } from './icons/icons';
-export { thirdLibraryColumn } from './icons/icons';
-export { fourthLibraryColumn } from './icons/icons';
+// for sidebar navigation 
+export { pages } from './pages/pages';
+export { components } from './components/components';
+
+// for library page
+export { firstUiColumn } from './ui_column/ui_column';
+export { secondUiColumn } from './ui_column/ui_column';
+export { thirdUiColumn } from './ui_column/ui_column';
+export { fourthUiColumn } from './ui_column/ui_column';
+

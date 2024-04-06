@@ -1,30 +1,75 @@
 .container {
-	width: full;
+	width: 100%;
 	display: flex;
-	justify-items: center;
+	justify-content: center;
 	color: white;
 }
 
-.text {
-	//start video
-	width: 100%;
-	font-size: 3em;
-	letter-spacing: 10px;
-	font-family:  monospace;
-	border-right: 5px solid;
+.logo {
+	cursor: pointer;
+	width: 90px;
+	height: 90px;
+}
+
+.left_side {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	height: calc(100vh - 100px);
+	// height: 100vh;
+	width: 50%;
 	white-space: nowrap;
+
+	font-size: 2.5em;
+	letter-spacing: 10px;
+	padding: 100px 0;
+	gap: 100px;
+}
+
+.left_side_title {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 10px;
+}
+
+.left_side_name {
+	display: flex;
+	gap: 20px;
+}
+
+.right_side {
+	width: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.developer {
+	width: 90%;
+}
+
+.name {
+	color: $primary-color;
+	width: 100%;
+	border-right: 5px solid white;
 	overflow: hidden;
 	animation: 
-		typing 4s, // steps(15) here something important
+		typing 3s,
 		cursor .4s step-end infinite alternate;
 }
 
-/* cursor blinking */
 @keyframes cursor {
 	50% { border-color: transparent }
 }
 
-/* typing effect */
 @keyframes typing {
 	from { width: 0 }
+}
+
+.welcome {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	letter-spacing: 4px;
 }

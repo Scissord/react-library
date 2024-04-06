@@ -1,5 +1,5 @@
 import { FC, ReactNode, useState } from 'react';
-import { firstLibraryColumn, fourthLibraryColumn, secondLibraryColumn, thirdLibraryColumn } from '@constants';
+import { firstUiColumn, fourthUiColumn, secondUiColumn, thirdUiColumn } from '@constants';
 import { UIColumn } from '@components';
 import styles from './Library.module.scss';
 
@@ -9,7 +9,7 @@ export const Library: FC = () => {
 	return (
 		<div className={styles.container}>
 			<UIColumn
-				components={firstLibraryColumn}
+				components={firstUiColumn}
 				bg="#00C0EF"
 				bgDark="#00A3CB"
 				activeIcon={activeIcon}
@@ -17,7 +17,7 @@ export const Library: FC = () => {
 			/>
 
 			<UIColumn
-				components={secondLibraryColumn}
+				components={fourthUiColumn}
 				bg="#00A65A"
 				bgDark="#008D4C"
 				activeIcon={activeIcon}
@@ -25,7 +25,7 @@ export const Library: FC = () => {
 			/>
 
 			<UIColumn
-				components={thirdLibraryColumn}
+				components={secondUiColumn}
 				bg="#F39C12"
 				bgDark="#CE840F"
 				activeIcon={activeIcon}
@@ -33,7 +33,7 @@ export const Library: FC = () => {
 			/>
 
 			<UIColumn
-				components={fourthLibraryColumn}
+				components={thirdUiColumn}
 				bg="#DD4B39"
 				bgDark="#BC3F30"
 				activeIcon={activeIcon}

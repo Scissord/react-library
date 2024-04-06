@@ -1,10 +1,8 @@
-import { FC, ReactNode } from 'react';
+import { FC, ReactNode, useCallback, useEffect, useState } from 'react';
+import { useNavigate, useLocation } from '@hooks';
 import { Icon } from '@ui';
-import { useNavigate } from '@hooks';
+import { LuChevronDownSquare, LuChevronUpSquare } from "react-icons/lu";
 import styles from './SideNavbar.module.scss';
-
-// future:
-// 1. animation onClick
 
 interface Route {
   label: string;
@@ -13,27 +11,54 @@ interface Route {
 }
 
 type SideNavbarProps = {
-	title: string,
-	routes: Route[]
-}
+  title: string;
+  routes: Route[];
+};
 
-export const SideNavbar: FC<SideNavbarProps> = (props) => {
-	const { title, routes } = props;
-	const navigate = useNavigate();
+export const SideNavbar: FC<SideNavbarProps> = ({ title, routes }) => {
+  const navigate = useNavigate();
+  const location = useLocation();
+  const [activeRoute, setActiveRoute] = useState<string>('');
+  const [open, setOpen] = useState<boolean>(false);
 
-	return (
-		<div className={styles.container}>
-			<label className={styles.title}>{title}</label>
-			{routes.map((route) => (
-				<div 
-					key={route.label}
-					className={styles.link}
-					onClick={() => navigate(route.link)}
-				>
-					<Icon mr={9} icon={route.icon}/>
-					<label className={styles.text}>{route.label}</label>
-				</div>
-			))}
-		</div>
-	)
-}
+  useEffect(() => {
+    title === 'Pages' && setOpen(true)
+  }, [title])
+
+  useEffect(() => {
+    const activeLabel = routes.find(route => route.link === location.pathname)?.label ?? '/';
+    setActiveRoute(activeLabel);
+  }, [location.pathname, routes, setActiveRoute]);
+
+	const handleClick = useCallback((label: string, link: string) => {
+		if (label !== activeRoute) {
+			setActiveRoute(label);
+			navigate(link);
+		}
+	}, [activeRoute, setActiveRoute, navigate]);
+
+  return (
+    <div className={styles.container}>
+      <div className={styles.title}>
+        <label className={styles.title_text}>{title}</label>
+        <Icon 
+          size="1.2rem"
+          icon={open ? <LuChevronDownSquare/> : <LuChevronUpSquare/>} 
+          onClick={() => setOpen(!open)}
+        />
+      </div>
+      {open && <>
+        {routes.map(({ label, link, icon }) => (
+          <div
+            key={label}
+            className={`${styles.link} ${label === activeRoute ? styles.activeLink : ''}`}
+            onClick={() => handleClick(label, link)}
+          >
+            <Icon mr={9} icon={icon} />
+            <label className={styles.text}>{label}</label>
+          </div>
+        ))}
+      </>}
+    </div>
+  );
+};
