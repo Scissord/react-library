@@ -1,41 +1,46 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { 
   Layout, Home, Library, 
-  About, NotFound, Box,
-  SelectSearch, Notification,
-  Tooltip, Button, Checkbox,
-  Pagination, Label, Icon,
-  Radio, Switch, Loader,
-  Modal, Select
+  Faq, NotFound, BoxPage,
+  SelectSearchPage, NotificationPage,
+  TooltipPage, ButtonPage, CheckboxPage,
+  PaginationPage, LabelPage, IconPage,
+  RadioPage, SwitchPage, LoaderPage,
+  ModalPage, SelectPage, OpenPage,
+  StatusBarPage, SliderPage
 } from '@pages';
 // import { routes } from '@constants';
-
-const routes = [
-  //pages
-  { path: "/", element: <Home /> },
-  { path: "/library", element: <Library /> },
-  { path: "/about", element: <About /> },
-  { path: "*", element: <NotFound /> },
-  //components
-  { path: "/box", element: <Box/> },
-  { path: '/select-search', element: <SelectSearch/> },
-	{ path: '/notification', element: <Notification/> },
-	{ path: '/tooltip', element: <Tooltip/> },
-  { path: '/button', element: <Button/> },
-	{ path: '/checkbox', element: <Checkbox/> },
-	{ path: '/pagination', element: <Pagination/> },
-  { path: '/label', element: <Label/> },
-	{ path: '/icon', element: <Icon/> },
-	{ path: '/radio', element: <Radio/> },
-	{ path: '/switch', element: <Switch/> },
-  { path: '/loader', element: <Loader/> },
-	{ path: '/modal', element: <Modal/> },
-	{ path: '/select', element: <Select/> },
-]
 
 // const routes = [
 //   ...require('./constants/routes/routes').default,
 // ]
+
+const routes = [
+  // pages
+  { path: "/", element: <Home /> },
+  { path: "/library", element: <Library /> },
+  { path: "/about", element: <Faq /> },
+  { path: "*", element: <NotFound /> },
+  // components
+  { path: "/box", element: <BoxPage/> },
+  { path: '/select-search', element: <SelectSearchPage/> },
+	{ path: '/notification', element: <NotificationPage/> },
+	{ path: '/tooltip', element: <TooltipPage/> },
+  { path: '/button', element: <ButtonPage/> },
+	{ path: '/checkbox', element: <CheckboxPage/> },
+	{ path: '/pagination', element: <PaginationPage/> },
+  { path: '/label', element: <LabelPage/> },
+	{ path: '/icon', element: <IconPage/> },
+	{ path: '/radio', element: <RadioPage/> },
+	{ path: '/switch', element: <SwitchPage/> },
+  { path: '/loader', element: <LoaderPage/> },
+	{ path: '/modal', element: <ModalPage/> },
+	{ path: '/select', element: <SelectPage/> },
+  // animations 
+  { path: '/open-animation', element: <OpenPage/>,  },
+	{ path: '/slider-animation', element: <SliderPage/> },
+	{ path: '/status-bar-animation', element: <StatusBarPage/> },
+]
 
 function App() {
   return (

@@ -1,24 +1,29 @@
-//layout
+// layout
 export { Layout } from './_layout';
 
-//pages
-export { Home } from './Home/Home';
-export { Library } from './Library/Library'
-export { About } from './About/About';
-export { NotFound } from './NotFound/NotFound';
+// pages
+export { Home } from './Routes/Home/Home';
+export { Library } from './Routes/Library/Library'
+export { Faq } from './Routes/Faq/Faq';
+export { NotFound } from './Routes/NotFound/NotFound';
 
-//components
-export { Box } from './Box/Box';
-export { SelectSearch } from './SelectSearch/SelectSearch';
-export { Notification } from './Notification/Notification';
-export { Tooltip } from './Tooltip/Tooltip';
-export { Button } from './Button/Button';
-export { Checkbox } from './Checkbox/Checkbox';
-export { Pagination } from './Pagination/Pagination';
-export { Label } from './Label/Label';
-export { Icon } from './Icon/Icon';
-export { Radio } from './Radio/Radio';
-export { Switch } from './Switch/Switch';
-export { Loader } from './Loader/Loader';
-export { Modal } from './Modal/Modal';
-export { Select } from './Select/Select';
+// components
+export { BoxPage } from './UI/BoxPage/BoxPage';
+export { SelectSearchPage } from './UI/SelectSearchPage/SelectSearchPage';
+export { NotificationPage } from './UI/NotificationPage/NotificationPage';
+export { TooltipPage } from './UI/TooltipPage/TooltipPage';
+export { ButtonPage } from './UI/ButtonPage/ButtonPage';
+export { CheckboxPage } from './UI/CheckboxPage/CheckboxPage';
+export { PaginationPage } from './UI/PaginationPage/PaginationPage';
+export { LabelPage } from './UI/LabelPage/LabelPage';
+export { IconPage } from './UI/IconPage/IconPage';
+export { RadioPage } from './UI/RadioPage/RadioPage';
+export { SwitchPage } from './UI/SwitchPage/SwitchPage';
+export { LoaderPage } from './UI/LoaderPage/LoaderPage';
+export { ModalPage } from './UI/ModalPage/ModalPage';
+export { SelectPage } from './UI/SelectPage/SelectPage';
+
+// animations
+export { OpenPage } from './Animations/OpenPage/OpenPage';
+export { SliderPage } from './Animations/SliderPage/SliderPage';
+export { StatusBarPage } from './Animations/StatusBarPage/StatusBarPage';

@@ -1,7 +1,7 @@
 import { FC } from 'react';
 import { SideNavbar, SideNavbarLogo } from '@components';
 import { useNavigate } from '@hooks';
-import { components, pages } from '@constants';
+import { components, pages, animations } from '@constants';
 import styles from './Sidebar.module.scss';
 
 export const Sidebar: FC = () => {
@@ -12,6 +12,7 @@ export const Sidebar: FC = () => {
 			<SideNavbarLogo label="NCode" onClick={() => navigate('/')}/>
 			<SideNavbar title="Pages" routes={pages}/>
 			<SideNavbar title="UI" routes={components}/>
+			<SideNavbar title="Animations" routes={animations}/>
 		</div>
 	)
 }

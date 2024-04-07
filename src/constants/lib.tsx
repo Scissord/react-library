@@ -11,3 +11,5 @@ export { secondUiColumn } from './ui_column/ui_column';
 export { thirdUiColumn } from './ui_column/ui_column';
 export { fourthUiColumn } from './ui_column/ui_column';
 
+// for animations page
+export { animations } from './animations/animations';

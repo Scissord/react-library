@@ -39,12 +39,11 @@ export const SideNavbar: FC<SideNavbarProps> = ({ title, routes }) => {
 
   return (
     <div className={styles.container}>
-      <div className={styles.title}>
+      <div className={styles.title} onClick={() => setOpen(!open)}>
         <label className={styles.title_text}>{title}</label>
         <Icon 
           size="1.2rem"
-          icon={open ? <LuChevronDownSquare/> : <LuChevronUpSquare/>} 
-          onClick={() => setOpen(!open)}
+          icon={open ? <LuChevronUpSquare/> : <LuChevronDownSquare/>} 
         />
       </div>
       {open && <>
