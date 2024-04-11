@@ -11,10 +11,12 @@ export const SideNavbarLogo: FC<SideNavbarLogo> = (props) => {
 
 	return (
 		<div className={styles.container} onClick={onClick}>
-			<img alt='bullfinch' src='/logo/logo_dark.svg' className={styles.logo}/>
-			<label className={styles.label}>
-				{label}
-			</label>
+			<div className={styles.wrap}>
+				<img alt='bullfinch' src='/logo/logo_dark.svg' className={styles.logo}/>
+				<label className={styles.label}>
+					{label}
+				</label>
+			</div>
 		</div>
 	)
 }

@@ -7,7 +7,8 @@ import {
   PaginationPage, LabelPage, IconPage,
   RadioPage, SwitchPage, LoaderPage,
   ModalPage, SelectPage, OpenPage,
-  StatusBarPage, SliderPage
+  StatusBarPage, SliderPage, GradientPage,
+  ListPage
 } from '@pages';
 // import { routes } from '@constants';
 
@@ -40,6 +41,8 @@ const routes = [
   { path: '/open-animation', element: <OpenPage/>,  },
 	{ path: '/slider-animation', element: <SliderPage/> },
 	{ path: '/status-bar-animation', element: <StatusBarPage/> },
+  { path: '/gradient-animation', element: <GradientPage/> },
+  { path: '/list-animation', element: <ListPage/> },
 ]
 
 function App() {

@@ -3,4 +3,7 @@
 	height: 100vh;	
 	background-color: $bg;
 	padding: 16px 20px;
+	overflow-y: auto;
+	scrollbar-width: thin;
+	scrollbar-color: $primary-color #fff;
 }

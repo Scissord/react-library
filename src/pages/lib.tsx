@@ -27,3 +27,5 @@ export { SelectPage } from './UI/SelectPage/SelectPage';
 export { OpenPage } from './Animations/OpenPage/OpenPage';
 export { SliderPage } from './Animations/SliderPage/SliderPage';
 export { StatusBarPage } from './Animations/StatusBarPage/StatusBarPage';
+export { GradientPage } from './Animations/GradientPage/GradientPage';
+export { ListPage } from './Animations/ListPage/ListPage';

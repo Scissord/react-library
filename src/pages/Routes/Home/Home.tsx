@@ -19,7 +19,7 @@ export const Home: FC = () => {
 				</div>
 
 				<div className={styles.welcome}>
-					<p>Welcome to my React Library</p>
+					<p>Welcome to my React library,</p>
 					<p>with passion for learning</p>
 					<p>and creating.</p>
 				</div>
