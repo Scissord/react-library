@@ -30,6 +30,10 @@ export const SideNavbar: FC<SideNavbarProps> = ({ title, routes }) => {
     setActiveRoute(activeLabel);
   }, [location.pathname, routes, setActiveRoute]);
 
+  useEffect(() => {
+    if(location.pathname === routes.find(route => route.link === location.pathname)?.link) setOpen(true);
+  }, [location.pathname, routes])
+
 	const handleClick = useCallback((label: string, link: string) => {
 		if (label !== activeRoute) {
 			setActiveRoute(label);
