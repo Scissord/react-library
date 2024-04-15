@@ -35,7 +35,7 @@ export const UIColumn: FC<ColumnProps> = ({ components, bg, bgDark, activeIcon, 
 							<Icon color={bgDark} ml="auto" size="6rem" icon={icon}/>
 						</section>
 						<section className={styles.bottom_card} style={{ backgroundColor: bgDark }}>
-							<label>props</label>
+							<label>{'props'}</label>
 							<Icon 
 								size="1.2rem"
 								onClick={() => handleClick(icon === activeIcon ? null : icon)} 
