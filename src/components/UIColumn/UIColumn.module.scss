@@ -3,6 +3,7 @@
 	flex-direction: column;
 	gap: 20px;
 	width: 25%;
+	overflow-y: auto;
 }
 
 .card {
@@ -52,4 +53,13 @@
 .props_card_title {
 	font-size: 24px;
 	color: black;
+}
+
+@media (max-width: 1920px) {
+	.column {
+		gap: 40px;
+	}
+  .top_card_label {
+    font-size: 24px;
+  }
 }
