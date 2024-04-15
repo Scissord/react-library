@@ -1,0 +1,9 @@
+export { Box } from './Box/Box';
+export { Button } from './Button/Button';
+export { Icon } from './Icon/Icon';
+export { Label } from './Label/Label';
+export { Tabs } from './Tabs/Tabs';
+export { Section } from './Section/Section';
+export { Img } from './Img/Img';
+export { Span } from './Span/Span';
+export { P } from './P/P';
