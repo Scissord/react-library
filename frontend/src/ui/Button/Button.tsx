@@ -1,57 +1,38 @@
 import { FC, ReactNode } from 'react';
-import styles from './Button.module.scss';
 import { Icon } from '@ui';
 
+// import styles from './Button.module.scss';
 // icon - react-icons
-// color - black, white, #5F58CC
-// className	{styles.a}	
-// size	1em	
-// mr margin-right
-
+// className "btn"
 
 type ButtonProps = {
-  text: string;
+  text?: string;
+  className?: string;
+  children?: string;
   onClick: () => void;
   icon?: ReactNode,
-  color?: string;
-  size?: number | string;
-  mt?: number | string;
-	mb?: number | string;
-  mr?: number | string;
-	ml?: number | string;
   leftIcon?: ReactNode;
-  leftIconColor?: string;
 	leftIconSize?: number | string;
   rightIcon?: ReactNode;
-  rightIconColor?: string;
 	rightIconSize?: number | string;
 };
 
 export const Button: FC<ButtonProps> = (props) => {
 	const { 
-    text, onClick, color, 
-    size, mt, mb, mr, ml, 
-    leftIcon, leftIconColor, 
+    text, className, children, 
+    onClick, leftIcon, 
     leftIconSize, rightIcon, 
-    rightIconColor, rightIconSize
+    rightIconSize
   } = props;
 
   return (
     <button 
-      className={styles.button} 
+      className={className} 
       onClick={onClick}
-      style={{
-        color: color ?? 'white', 
-				fontSize: size ?? '20px',
-        marginTop: mt,
-        marginBottom: mb,
-				marginRight: mr,
-				marginLeft: ml,
-      }}
     >
-      {leftIcon && <Icon icon={leftIcon} color={leftIconColor} size={leftIconSize}/>}
-      {text}
-      {rightIcon && <Icon icon={rightIcon} color={rightIconColor} size={rightIconSize}/>}
+      {leftIcon && <Icon icon={leftIcon} size={leftIconSize}/>}
+      {text}{children}
+      {rightIcon && <Icon icon={rightIcon} size={rightIconSize}/>}
     </button>
   );
 };

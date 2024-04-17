@@ -4,6 +4,7 @@
 // for sidebar navigation 
 export { pages } from './pages/pages';
 export { components } from './components/components';
+export { projects } from './projects/projects';
 
 // for library page
 export { firstUiColumn } from './ui_column/ui_column';

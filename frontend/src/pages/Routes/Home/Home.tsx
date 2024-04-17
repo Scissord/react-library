@@ -10,29 +10,32 @@ export const Home: FC = () => {
 	return (
 		<Box className={styles.container}>
 			<Section className={styles.left_side}>
-				<Box className={styles.left_side_title}>
-					<Img 
-						alt='bullfinch' 
-						src='/logo/logo_dark.svg' 
-						className={styles.logo}
-					/>
-					<P>What's up!</P>
-					<Box className={styles.left_side_name}>
-						<Span>I'm</Span><P className={styles.name}>Scissxrd</P>
+				<Box className={styles.left_card}>
+					<Box className={styles.left_side_title}>
+						<Img 
+							alt='bullfinch' 
+							src='/logo/logo_dark.svg' 
+							className={styles.logo}
+						/>
+						<P>What's up!</P>
+						<Box className={styles.left_side_name}>
+							<Span>I'm</Span><P className={styles.name}>Scissxrd</P>
+						</Box>
 					</Box>
-				</Box>
 
-				<Box className={styles.welcome}>
-					<P>Welcome to my React library,</P>
-					<P>with passion for learning</P>
-					<P>and creating.</P>
-				</Box>
+					<Box className={styles.welcome}>
+						<P>Welcome to my React library,</P>
+						<P>with passion for learning</P>
+						<P>and creating.</P>
+					</Box>
 
-				<Button 
-					text="to Library"
-					onClick={() => navigate('/library')} 
-					rightIcon={<FaArrowAltCircleRight/>}
-				/>
+					<Button 
+						text="to Library" 
+						className="btn btn-outline border-primary text-primary" 
+						onClick={() => navigate('/library')}
+						rightIcon={<FaArrowAltCircleRight className='fill-primary'/>}
+					/>
+				</Box>
 			</Section>
 
 			<Section className={styles.right_side}>

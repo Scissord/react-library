@@ -9,7 +9,6 @@ import styles from './Icon.module.scss';
 
 type IconProps = {
 	icon: ReactNode,
-	color?: string,
 	size?: number | string,
 	mt?: number | string,
 	mb?: number | string,
@@ -19,19 +18,18 @@ type IconProps = {
 }
 
 export const Icon: FC<IconProps> = (props) => {
-	const { icon, color, size, mt, mb, mr, ml, onClick } = props;
+	const { icon, size, mt, mb, mr, ml, onClick } = props;
 
 	return (
 		<div 
 			className={styles.container} 
 			style={{ 
-				color: color ?? 'white', 
 				fontSize: size ?? '1em',
 				marginTop: mt,
 				marginBottom: mb,
 				marginRight: mr,
 				marginLeft: ml,
-				userSelect: 'none'
+				userSelect: 'none',
 			}}
 			onClick={onClick}
 		>

@@ -29,3 +29,6 @@ export { SliderPage } from './Animations/SliderPage/SliderPage';
 export { StatusBarPage } from './Animations/StatusBarPage/StatusBarPage';
 export { GradientPage } from './Animations/GradientPage/GradientPage';
 export { ListPage } from './Animations/ListPage/ListPage';
+
+// projects
+export { ChatApp } from './Projects/ChatApp/ChatApp';

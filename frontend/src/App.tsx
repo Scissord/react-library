@@ -8,7 +8,7 @@ import {
   RadioPage, SwitchPage, LoaderPage,
   ModalPage, SelectPage, OpenPage,
   StatusBarPage, SliderPage, GradientPage,
-  ListPage
+  ListPage, ChatApp
 } from '@pages';
 // import { routes } from '@constants';
 
@@ -43,6 +43,8 @@ const routes = [
 	{ path: '/status-bar-animation', element: <StatusBarPage/> },
   { path: '/gradient-animation', element: <GradientPage/> },
   { path: '/list-animation', element: <ListPage/> },
+  // projects
+  { path: '/chat-app', element: <ChatApp/> }
 ]
 
 function App() {
