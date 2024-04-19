@@ -17,7 +17,7 @@ function Login() {
 	};
 
 	return (
-		<form className="flex flex-col gap-4 px-8 pt-8 pb-6 border border-white w-[400px] rounded-xl bg-gray-400">
+		<form className="flex flex-col gap-4 px-8 pt-8 pb-6 border border-white w-[400px] rounded-xl">
 			<Title text="Login" className=" text-3xl"/>
 
 			<Box className="flex flex-col gap-2">
