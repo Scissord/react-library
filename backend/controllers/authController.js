@@ -11,6 +11,7 @@ export const signup = async (req, res) => {
 		// should be in validate function (service)
 		if(password !== confirmPassword) return res.status(400).send({ error: "Passwords don't match" });
 		if(user) return res.status(400).send({ error: "Username already exist" });
+		if(password.length !== 6) res.status(400).send({ error: "Password must be greater than or equal to 6 characters" });
 
 		// HASH PASSWORD
 		const salt = await bcrypt.genSalt(10);
